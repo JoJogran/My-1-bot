@@ -1,6 +1,6 @@
 import telebot,random
 
-bot = telebot.TeleBot("7088195729:AAHk0j2D13RFhL8djAXFuRpQIE64F2RyRu0")
+bot = telebot.TeleBot("TOKEN")
 
 @bot.message_handler(commands=['start'])
 def send_welcome(message):
@@ -51,5 +51,6 @@ def send_mem(message):
 @bot.message_handler(func=lambda message: True)
 def echo_all(message):
     bot.reply_to(message, message.text)
+
 
 bot.polling()
