@@ -1,7 +1,7 @@
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-TELEGRAM_TOKEN = '7088195729:AAHk0j2D13RFhL8djAXFuRpQIE64F2RyRu0'
+TELEGRAM_TOKEN = 'TOKEN'
 
 bot = telebot.TeleBot(TELEGRAM_TOKEN)
 
@@ -32,5 +32,6 @@ def callback_query(call):
 @bot.message_handler(func=lambda message: True)
 def message_handler(message):
     bot.send_message(message.chat.id, "Как тебе мой бот?", reply_markup=gen_markup())
+
 
 bot.infinity_polling()
